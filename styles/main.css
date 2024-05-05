@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Radio Canada Big", sans-serif;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: all .6s;
+  }
+button:hover {
+    background: rgba(85, 25, 122, 0.445)
+  }
+button:disabled {
+    background: none;
+  }
+.calculator{
+    height: 600px;
+    width: 400px;
+
+    background: rgba(134, 40, 192, 0.357);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    }
+.display{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0px 20px;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+
+    overflow-x: auto;
+}
+.display::-webkit-scrollbar{
+    height: 2px;
+    background-color: none;
+}
+.display::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 255, 255);
+}
+.input{
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.grid-item{
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 0px) and (max-width: 425px) {
+    .calculator{
+        width: 90%;
+        height: 90%;
+    }
+}
